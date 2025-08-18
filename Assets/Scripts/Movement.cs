@@ -4,6 +4,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] InputAction thrust;
+    [SerializeField] float thrustForce = 10f;
     Rigidbody rb;
 
     private void Start()
@@ -20,7 +21,7 @@ public class Movement : MonoBehaviour
     {
         if(thrust.IsPressed())
         {
-            Debug.Log("Thrust is pressed");
+            rb.AddRelativeForce(Vector3.up * thrustForce * Time.fixedDeltaTime);
         }
     }
 }

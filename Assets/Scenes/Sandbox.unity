@@ -663,6 +663,7 @@ MonoBehaviour:
       m_Action: Thrust
       m_Flags: 0
     m_Flags: 0
+  thrustForce: 1000
 --- !u!54 &1914833835
 Rigidbody:
   m_ObjectHideFlags: 0
