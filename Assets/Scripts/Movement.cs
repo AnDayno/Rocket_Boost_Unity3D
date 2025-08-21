@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] InputAction rotation;
     [SerializeField] float rotationForce = 10f;
     [SerializeField] float thrustForce = 10f;
+    [SerializeField] AudioClip mainEngine;
 
     AudioSource audioSource;
     Rigidbody rb;
@@ -38,7 +39,7 @@ public class Movement : MonoBehaviour
 
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(mainEngine);
             }
         }
         else
